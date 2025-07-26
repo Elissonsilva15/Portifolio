@@ -44,6 +44,31 @@ body {
     object-fit: cover;
 }
 
+.titulo-ola {
+    font-size: 35px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    width: 0ch;
+    animation: digitar 2s steps(30) forwards;
+
+}
+
+@keyframes digitar {
+    from {
+        width: 0ch;
+
+    }
+
+    to {
+        width: 20ch;
+        /* ajuste conforme o texto */
+
+    }
+}
+
+
+
 /* Container */
 .Container {
     display: flex;
@@ -89,6 +114,7 @@ body {
 }
 
 .titulo-sobre {
+
     font-size: 2rem;
     margin-bottom: 1rem;
     font-family: "Roboto", sans-serif;
@@ -137,7 +163,7 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: #00000042;
-  
+
     border-radius: 0.5rem;
     height: 350px;
     text-align: center;
@@ -480,9 +506,15 @@ a {
 
 
 @media (max-width: 768px) {
+
     .containers {
         grid-template-columns: repeat(2, 1fr);
 
+    }
+
+    .titulo-ola {
+
+        flex-wrap: nowrap;
     }
 
     .div-sobre {
