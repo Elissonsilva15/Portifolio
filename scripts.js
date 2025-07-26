@@ -18,7 +18,6 @@ window.onscroll = function () {
 const botoes = document.querySelectorAll('.btn-sobre');
 const detalhes = document.querySelectorAll('.detalhes');
 const sair = document.querySelectorAll('.btn-sair');
-
 const inputnome = document.getElementById('inputnome')
 const inputMensagem = document.getElementById('inputComentario')
 const bntchat = document.querySelector('.btn-chat')
@@ -27,12 +26,12 @@ const Enviarbutton = document.querySelector('.send-button')
 const confirmacao = document.querySelector('.confirmacao')
 
 
-// para cada botão
+
 botoes.forEach((btn, index) => {
   btn.addEventListener('click', () => {
-    const detalhe = detalhes[index]; // pega o "detalhes" correspondente
+    const detalhe = detalhes[index];
 
-    // pega o estilo atual
+    
     const estilo = window.getComputedStyle(detalhe);
 
     if (estilo.display === 'none') {
@@ -69,7 +68,7 @@ bntchat.addEventListener('click', () => {
   }
 });
 
-Enviarbutton.addEventListener('click',()=>{
+Enviarbutton.addEventListener('click', () => {
   enviarEmail()
 
 
@@ -106,13 +105,13 @@ async function enviarEmail() {
       inputnome.value = ''
       inputMensagem.value = ``
 
-      chat.style.display ='none'
+      chat.style.display = 'none'
 
-       confirmacao.style.display ='block'
+      confirmacao.style.display = 'block'
 
-      setTimeout(()=>{
-        confirmacao.style.display ='none'
-      },5000)
+      setTimeout(() => {
+        confirmacao.style.display = 'none'
+      }, 5000)
 
       const dados = await enviar.json();
 
