@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-
+@import url('/assets/css/chat.css');
 * {
     color: white;
 
@@ -91,6 +91,18 @@ body {
 
 
 }
+.btn-chat{
+    position: fixed;
+    top: 80%;
+    width: 40px;
+    left: 93%;
+    background-color: #6d65653b;
+    border-radius: 20px;
+}
+.btn-chat:hover{
+    cursor: pointer;
+    background-color: #4a65a8;
+}
 
 .ver a {
     color: #c0cccf;
@@ -112,7 +124,7 @@ body {
     margin-top: 3rem;
     align-items: center;
     text-align: justify;
-    font-family: "Roboto", sans-serif;
+     font-family: "Roboto", sans-serif;
 }
 
 .titulo-sobre {
@@ -126,6 +138,7 @@ body {
 .Sobre .mim {
     font-size: 1.125rem;
     max-width: 800px;
+   
 }
 
 /* PROJETOS */
@@ -224,10 +237,10 @@ body {
     width: 45px;
     height: 40px;
     position: absolute;
-
     top: 80%;
     left: 89%;
 }
+
 
 .abrir-link {
     position: absolute;
@@ -286,11 +299,24 @@ body {
     background-color: #020817;
     z-index: 2;
     border-radius: 10px;
-
     overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: abrirParaCima 0.3s ease-out forwards;
 
 
 }
+ @keyframes abrirParaCima {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
 
 .h1-info-titulo {
     font-size: 20px;
@@ -442,9 +468,6 @@ h2 {
 
 
 #btnsubir {
-    display: flex;
-
-
     scroll-behavior: smooth;
     display: none;
     position: fixed;
@@ -493,6 +516,13 @@ a {
     }
 }
 
+.confirmacao{
+    display: none;
+    position: fixed;
+    top: 73%;
+    left: 80%;
+}
+
 
 
 @media (min-width: 640px) {
@@ -518,9 +548,10 @@ a {
 
         flex-wrap: nowrap;
     }
-    .introducao{
+
+    .introducao {
         overflow: hidden;
-}
+    }
 
     .div-sobre {
         overflow: hidden;
@@ -534,6 +565,7 @@ a {
 
     .proj {
         width: 100%;
+        height: 60vh;
     }
 
     .containers {
@@ -561,6 +593,22 @@ a {
     .btn-sobre {
 
         left: 83%;
+    }
+
+    .btn-chat{
+        transform: translateX(-800%);
+        position: fixed;
+         z-index: 9;
+    }
+  
+    .chat{
+        transform: translateX(-80%);
+        width: 80%;
+    }
+    .confirmacao{
+        transform: translateX(-95%);
+        font-size: 20px;
+    
     }
 
 }

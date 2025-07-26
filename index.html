@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   
 </head>
 
 <body>
@@ -114,16 +116,7 @@
 
 
 
-
-        <!-- <span class="skill"><i class="fab fa-html5"></i> HTML5</span>
-        <span class="skill"><i class="fab fa-css3-alt"></i> CSS3</span>
-        <span class="skill"><i class="fab fa-js"></i> JavaScript (ES6+)</span>
-        <span class="skill"><i class="fab fa-react"></i> React.js</span>
-        <span class="skill"><i class="fab fa-vuejs"></i> Vue.js</span>
-        <span class="skill"><i class="fab fa-angular"></i> Angular</span>
-        <span class="skill"><i class="fab fa-tailwind"></i> Tailwind CSS</span>
-        <span class="skill"><i class="fab fa-bootstrap"></i> Bootstrap</span>
-    </div> -->
+    </div> 
     </div>
     </div>
 
@@ -183,7 +176,88 @@
 
 
     <div id="btnsubir"> <a href="#header"><img src="assets/icon/up-arrow.png" alt="" class="img-subir"></a></div>
+    <div class="btn-chat"> <img src="assets/icon/chat.png" alt=""></a></div>
+ 
+ 
+    </button>
+    <div class="chat">
+  <div class="feedback-box">
+    <h1 class="title">Deixe seu Feedback</h1>
 
+    <input type="text" class="input-nome" id="inputnome" placeholder="Seu nome..." />
+
+    <textarea class="feedback-textarea" placeholder="Seu feedback..." id="inputComentario"></textarea>
+
+    <button class="icon-button">
+   
+      <svg viewBox="0 0 512 512" height="20px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+      </svg>
+    </button>
+
+    <button class="icon-button">
+     
+      <svg viewBox="0 0 512 512" height="20px" xmlns="http://www.w3.org/2000/svg">
+        <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM174.6 384.1c-4.5 12.5-18.2 18.9-30.7 14.4s-18.9-18.2-14.4-30.7C146.9 319.4 198.9 288 256 288s109.1 31.4 126.6 79.9c4.5 12.5-2 26.2-14.4 30.7s-26.2-2-30.7-14.4C328.2 358.5 297.2 336 256 336s-72.2 22.5-81.4 48.1zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/>
+      </svg>
+    </button>
+
+    <span></span>
+
+    <button class="send-button">
+   
+      <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 24 24" fill="none">
+        <path d="M7.39999 6.32003L15.89 3.49003C19.7 2.22003 21.77 4.30003 20.51 8.11003L17.68 16.6C15.78 22.31 12.66 22.31 10.76 16.6L9.91999 14.08L7.39999 13.24C1.68999 11.34 1.68999 8.23003 7.39999 6.32003Z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10.11 13.6501L13.69 10.0601" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+<div class="confirmacao">
+<div class="flex flex-col gap-2 w-60 sm:w-72 text-[10px] sm:text-xs z-50">
+  <div
+    class="succsess-alert cursor-default flex items-center justify-between w-full h-12 sm:h-14 rounded-lg bg-[#232531] px-[10px]"
+  >
+    <div class="flex gap-2">
+      <div class="text-[#2b9875] bg-white/5 backdrop-blur-xl p-1 rounded-lg">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m4.5 12.75 6 6 9-13.5"
+          ></path>
+        </svg>
+      </div>
+      <div>
+        <p class="text-white">Mensagem enviada com Sucesso!</p>
+        <p class="text-gray-500">Recebi sua mensagem,Obrigado😊</p>
+      </div>
+    </div>
+    <button
+      class="text-gray-600 text-gray-600 hover:bg-white/5 p-1 rounded-md transition-colors ease-linear"
+    >
+   
+        <!-- <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18 18 6M6 6l12 12"
+        ></path> -->
+      </svg>
+    </button>
+  </div>
+</div>
+</div>
+
+    
 
     <section class="secao-contato" id="contato">
         <h1>Entre em contato</h1>
@@ -209,6 +283,10 @@
     <section class="secao-footer">
         <h1>© 2025 Elisson. Todos os direitos reservados.</h1>
     </section>
+
+
+
+
 
 </body>
 <script src="scripts.js"></script>
