@@ -390,6 +390,7 @@ body {
   align-items: center;
   top: 40%;
   left: 75%;
+  z-index: 999;
 }
 .input-nome {
   grid-column: span 6;
