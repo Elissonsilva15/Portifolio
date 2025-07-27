@@ -168,8 +168,6 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     justify-content: center;
-
-
 }
 
 
@@ -223,6 +221,18 @@ body {
     flex-direction: column;
     position: absolute;
     top: 75%;
+    align-items: center;
+
+}
+
+.content {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-55%);
+    display: flex;
+    flex-direction: column;
     align-items: center;
 
 }
@@ -327,6 +337,15 @@ body {
     }
 }
 
+p {
+    font-family: "Roboto", sans-serif;
+
+    font-size: 20px;
+    color: #c0cccf;
+    letter-spacing: -1px;
+
+}
+
 .detalhes {
     position: absolute;
     display: none;
@@ -419,7 +438,9 @@ body {
 
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 
 
@@ -635,7 +656,6 @@ h2 {
 
 
 #btnsubir {
-    scroll-behavior: smooth;
     display: none;
     position: fixed;
     bottom: 20px;
@@ -652,6 +672,18 @@ h2 {
     width: 50px;
     height: 50px;
 
+}
+
+.btnChat {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+    border-radius: 50px;
+    background-color: #5c5a64;
+    height: 50px;
+    border: 1px solid red;
+    z-index: 3;
 }
 
 a {
@@ -692,181 +724,77 @@ a {
 
 
 
-@media (max-width: 896px) {
+
+
+@media (max-width: 480px) {
+
     .projetos {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
         width: 100%;
+        gap: 1rem;
     }
+
+    .content {}
 }
 
-@media (max-width: 1024px) {}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .projetos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        width: 100%;
+        gap: 1rem;
+    }
 
 
-@media (max-width: 768px) {
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .projetos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        gap: 1rem;
+    }
 
     .containers {
         grid-template-columns: repeat(2, 1fr);
-
     }
+}
 
-    .header {
-        height: 100vh;
-    }
 
-    .titulo-ola {
-
-        flex-wrap: nowrap;
-    }
-
-    .introducao {
-        overflow: hidden;
-    }
-
-    .div-sobre {
-        overflow: hidden;
-    }
+@media (min-width: 1025px) and (max-width: 1366px) {
 
     .projetos {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
         width: 100%;
-    }
-
-    .proj {
-        width: 100%;
-        height: 65vh;
+        gap: 1rem;
     }
 
     .containers {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .ver:hover {
-        color: #c0cccf;
-    }
-
-    .abrir-link {
-        top: 88%;
-        left: 85%;
-
-    }
-
-    .click {
-
-        top: 90%;
-        left: 68%;
-
-    }
-
-    .btn-sobre {
-
-        left: 83%;
-    }
-
-
-    .chat {
-        transform: translateX(-80%);
-        width: 80%;
-    }
-
-    .confirmacao {
-        transform: translateX(-95%);
-        font-size: 20px;
-
-    }
-
-    .btn-sobre {
-        top: 88%;
-        transform: translateX(-90%);
-    }
 
 
 }
 
+/* Telas maiores (HD e acima) */
+@media (min-width: 1367px) {
 
-@media (min-width: 1024px) {
+    /* Estilo para desktops grandes */
+    .projetos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+    }
 
     .containers {
         grid-template-columns: repeat(4, 1fr);
-
     }
-}
-
-
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-#cabecalho {
-    background-color: transparent;
-    transition: background-color 0.3s;
-}
-
-#cabecalho.scrolled {
-    background-color: #333;
-}
-
-@media (min-width: 2560px) {
-    body {}
-
-    .proj {
-        height: 55vh;
-    }
-
-    .div-sobre {
-        max-height: 250px;
-
-    }
-
-    .header {
-        font-size: 40px;
-    }
-
-    .mim label {
-        font-size: 40px;
-        width: 100%;
-
-    }
-
-    .proj h2 {
-        font-size: 40px;
-    }
-
-    .linguagem {
-        font-size: 40px;
-    }
-
-    .titulo-projeto {
-        font-size: 50px;
-    }
-
-    .titulo-habilidade {
-        font-size: 50px;
-    }
-
-    .titulo {
-        font-size: 40px;
-    }
-
-    .habilidade {
-        font-size: 30px;
-    }
-
-    .secao-contato {
-        font-size: 40px;
-    }
-
-    .secao-footer {
-        font-size: 40px;
-    }
-
-    .btnsubir {}
-
 }
