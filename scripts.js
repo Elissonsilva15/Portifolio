@@ -1,4 +1,4 @@
-import card from './assets/project/Projeto_Noticias/card.js'
+import card from "./assets/project/Projeto_Noticias/card.js";
 
 
 
