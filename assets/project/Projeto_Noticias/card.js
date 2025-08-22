@@ -26,6 +26,6 @@ function card(cards) {
     projetos.appendChild(card)
 
 }
-// window.location.href = "assets/project/Projeto_Noticias/sobre/sobre.html";
+window.location.href = "assets/project/Projeto_Noticias/sobre/sobre.html";
 
 export default card
