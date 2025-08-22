@@ -1,7 +1,7 @@
 const projetos = document.getElementById('projetos')
 
 const interfaces = {
-    imagem: '/assets/project/Projeto_Noticias/img/Noticias.png',
+    imagem: 'assets/project/Projeto_Noticias/img/Noticias.png',
     Projeto: 'Portal de Notícias',
     tecnologias: ['HTML', 'CSS', 'JavaScript'],
     data: '16/08/2025',
